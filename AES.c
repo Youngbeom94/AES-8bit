@@ -220,19 +220,9 @@ void AES_encrypt(const unsigned char *in, unsigned char *out, const AES_KEY *key
         ShiftRow(state);
         MixColumns(state);
         AddRoundKey(state, key, &round);
-    printf("\n");
-    for(cnt_j=  0; cnt_j < 16; cnt_j ++)
-    {
-        printf("%02x ",state[cnt_j]);
-    }
     }
     
     SubByte(state);
-    printf("\n");
-    for(cnt_i=  0; cnt_i < 16; cnt_i ++)
-    {
-        printf("%02x ",state[cnt_i]);
-    }
     ShiftRow(state);
     AddRoundKey(state, key, &round);
 

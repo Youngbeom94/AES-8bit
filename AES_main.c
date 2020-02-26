@@ -33,7 +33,7 @@ int main()
     cycles1 = cpucycles();
     AES_encrypt(in, out, key);
     cycles2 = cpucycles();
-    printf("%10lld\n",cycles2-cycles1);
+    printf("\ncycle is %10lld\n",cycles2-cycles1);
 
     printf("\nEncrypt txt : ");
     for (cnt_i = 0; cnt_i < 16; cnt_i++)
