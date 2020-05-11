@@ -327,6 +327,7 @@ void AES_encrypt(const unsigned char *in, unsigned char *out, unsigned char *rou
     Masked_M1_M4_2nd(state, M);
     AddRoundKey(state, roundkey, &round);
 
+
     for (cnt_i = 1; cnt_i < AES_MAXNR; cnt_i++)
     {
         SubByte(state, masked_sbox);
@@ -346,6 +347,7 @@ void AES_encrypt(const unsigned char *in, unsigned char *out, unsigned char *rou
         out[cnt_i] = state[cnt_i];
     }
 }
+
 void AES_encrypt_Random(const unsigned char *in, unsigned char *out, unsigned char *roundkey, unsigned char *M, unsigned char *masked_sbox)
 {
     unsigned char state[4 * Nb];

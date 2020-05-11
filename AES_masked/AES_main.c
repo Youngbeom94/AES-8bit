@@ -40,8 +40,8 @@ int main()
 
     //! Encrypt
     KeySchedule(userkey,roundkey,M,masked_sbox);
-    // AES_encrypt(in, out, roundkey,M,masked_sbox);
-    AES_encrypt_Random(in, out, roundkey,M,masked_sbox);
+    AES_encrypt(in, out, roundkey,M,masked_sbox);
+    // AES_encrypt_Random(in, out, roundkey,M,masked_sbox);
 
     // printf("\n");
     // for(cnt_i = 0 ; cnt_i <176 ; cnt_i ++)
