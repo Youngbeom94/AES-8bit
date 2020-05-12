@@ -25,7 +25,6 @@ int main()
         printf("%02x ", M[cnt_i]);
     }
 
-
     printf("\nPlain Txt   : ");
     for (cnt_i = 0; cnt_i < 16; cnt_i++)
     {

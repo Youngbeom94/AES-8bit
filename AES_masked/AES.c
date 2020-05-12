@@ -29,7 +29,6 @@ void MakeMakedValue(unsigned char *masked_sbox, unsigned char *M)
     {
         masked_sbox[(cnt_i ^ M[0])] = (sbox[cnt_i] ^ M[1]);
     }
-    //  2 3   4  5
     //? 02 03 01 01
     temp[0] = M[2] ^ M[3]; // 02 03 에해당하는 xtime
     temp[0] = xtime(temp[0]);
