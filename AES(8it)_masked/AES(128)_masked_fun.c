@@ -313,7 +313,7 @@ void FinalKeyAdd(unsigned char *state, unsigned char *roundkey, unsigned char *M
 
 void AES_encrypt_Randomized(const unsigned char *in, unsigned char *out, unsigned char *roundkey, unsigned char *M, unsigned char *masked_sbox)
 {
-    unsigned char state[4 * Nb];
+    unsigned char state[4 * Nb] = {0x00};
     int cnt_i, cnt_j;
     int round = 0;
 
