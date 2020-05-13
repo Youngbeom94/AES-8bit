@@ -320,13 +320,8 @@ void AES_encrypt_Randomized(const unsigned char *in, unsigned char *out, unsigne
     for (cnt_i = 0; cnt_i < 4 * Nb; cnt_i++)
         state[cnt_i] = in[cnt_i];
 
-    //! 1라운드
-    AddRoundKey_Masked(state,roundkey,&round,M); //AddRoundKey ^ (M1',M2',M3',M4')
-    SubByte_Masked(state,masked_sbox,M);//Subbyte ^M' ^(M1,M2,M3,M4)
-    MixColumns_Masked(state,M);//Mixcolumns ^ (M1',M2',M3',M4')
-
-    //! 2라운드 ~ 9라운드
-    for (cnt_i = 1; cnt_i < 9; cnt_i++)
+    //! 1라운드 ~ 9라운드
+    for (cnt_i = 0; cnt_i < 9; cnt_i++)
     {
         AddRoundKey_Masked(state,roundkey,&round,M);//AddRoundKey ^ (M1',M2',M3',M4')
         SubByte_Masked(state,masked_sbox,M);//Subbyte ^M' ^(M1,M2,M3,M4)
